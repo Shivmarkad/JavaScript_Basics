@@ -57,4 +57,58 @@
 // //     a: undefined
 // //   }
 
+// Hoisting Class Declaration
+
+// let peter = new Person('Peter', 25); // ReferenceError: Person is  
+//                                      // not defined
+// console.log(peter);
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// To access the classes we have to declare it first 
+
+// class Person {
+//     constructor(name, age) {
+//       this.name = name;
+//       this.age = age;
+//     }
+//   }
+//   let peter = new Person('Peter', 25); 
+//   console.log(peter);
+
+//   The above code output will be : 
+  // Person { name: 'Peter', age: 25 }
+  
+
+//   Hoisting Class Expressions :
+
+// Just as function expressions, class expressions are also not hoisted. For example, this code won’t work.
+
+// let peter = new Person('Peter', 25); // ReferenceError: Person is  
+//                                      // not defined
+// console.log(peter);
+// let Person = class {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// The correct way to do this is : 
+
+let Person = class {
+    constructor(name, age) {
+      this.name = name;
+      this.age = age;
+    }
+  }
+  let peter = new Person('Peter', 25); 
+  console.log(peter);
+  // Person { name: 'Peter', age: 25 }
+  
+
 
