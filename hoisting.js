@@ -12,10 +12,10 @@
 
 // // The above code will work like : 
 
-// // var helloWorld = function(){
-// //     console.log('Hello World!');  prints 'Hello World!'
-// //   }
-// //   helloWorld();
+var helloWorld = function(){
+    console.log('Hello World!'); //prints 'Hello World!'
+  }
+  helloWorld();
   
 
 // // JavaScript only hoist declaration not initialization
@@ -50,12 +50,12 @@
 // // the above code lexicalenvironment will look like :  
 // // lexicalEnvironment = {
 // //     a: <uninitialized>
-// //   }
+// // //   }
 
 // After first execution  
 //      lexicalEnvironment = {
-// //     a: undefined
-// //   }
+//     a: undefined
+//   }
 
 // Hoisting Class Declaration
 

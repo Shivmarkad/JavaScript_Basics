@@ -33,15 +33,15 @@ console.log(add(2,4))
 //   myFunc.showArgs(1, 2, 3, 4);
 
   
-// // let me = { 
-// //     name: "Ashutosh Verma", 
-// //     thisInArrow:() => { 
-// //     console.log("My name is " + this.name); // no 'this' binding here 
-// //     }, 
-// //     thisInRegular(){ 
-// //     console.log("My name is " + this.name); // 'this' binding works here 
-// //     } 
-// //    };
-// //    me.thisInArrow(); 
-// //    me.thisInRegular();
+let me = { 
+    name: "Shiv Markad", 
+    thisInArrow:() => { 
+    console.log("My name is " + this.name); // no 'this' binding here 
+    }, 
+    thisInRegular(){ 
+    console.log("My name is " + this.name); // 'this' binding works here 
+    } 
+   };
+   me.thisInArrow(); 
+   me.thisInRegular();
    
