@@ -34,7 +34,7 @@ var a = 3;
   
 // // Hoisting let and const variables:
 
-console.log(b);    ReferenceError
+console.log(b);    //ReferenceError
 let b = 3;
 /*
 All declarations (function, var, let, const and class) are hoisted in JavaScript, 
