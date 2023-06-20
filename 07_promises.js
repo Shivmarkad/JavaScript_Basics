@@ -1,89 +1,32 @@
-function operations(sumOfEve) {
-    setTimeout(() => {
-        console.log("calling sumOfEve function ")
-        sumOfEve()
-    })
+// // In JavaScript, promises are special objects that help you perform asynchronous operations.
+
+function f1() {
+    console.log('f1');
 }
 
-function anotherOperation(mulOfNum) {
-    setTimeout(() => {
-        console.log("calling mulOfNum function")
-        mulOfNum()
-    })
+function f2() { 
+    console.log('f2');
 }
 
-// function doThirdThing(callback) {
-//     setTimeout(() => {
-//         console.log("step third")
-
-//     })
-// }
-
-
-// doSomthing(function () {
-//     doSomthingElse(function () {
-//         doThirdThing()
-//     })
-// })
-
-
-// doSomthing(function () {
-//     doSomthingElse(function () {
-//         doThirdThing(function () {
-//             console.log("all steps are done")
-//         })
-//     })
-// })
-
-
-// async function one() {
-
-//     return new Promise((resole, reject) => {
-//         setTimeout(() => {
-//             resole("hi")
-//         })
-//     })
-
-// }
-
-// async function two() {
-//     return new Promise((resole, reject) => {
-//         setTimeout(() => {
-//             resole("hello from two")
-//         })
-//     })
-// }
-
-// async function three() {
-//     return new Promise((resole, reject) => {
-//         setTimeout(() => {
-//             resole("hello from three")
-//         })
-//     })
-// }
-
-
-fun()
-    .then((data) => {
-        console.log("done with one", data)
-        return two()
-    })
-    .then((data) => {
-        console.log("done with two", data)
-
-    })
-    .catch((error) => {
-        console.log("error")
-
-    })
-
-async function fncall() {
-    let result = await fun()
-
-    console.log("done with sum------->", result)
-    let resultTwo = await two()
-
-    console.log("mul---------->", resultTwo)
+function f3() { 
+    console.log('f3');
 }
 
-fncall()
+function main() {
+    console.log('main');
+
+    setTimeout(f1, 50);
+    setTimeout(f3, 30);
+
+    new Promise((resolve, reject) =>
+    resolve('I am a Promise, right after f1 and f3!')
+    ).then(resolve => console.log(resolve));
+    
+    new Promise((resolve, reject) =>
+    resolve('I am a Promise after Promise!')
+    ).then(resolve => console.log(resolve));
+
+    f2();
+}
+
+main();
