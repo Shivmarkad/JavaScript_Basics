@@ -35,7 +35,7 @@ function main() {
     }
     )
     .then(resolve => console.log(resolve))
-    .catch(error => console.log(error));
+    .catch(error => console.log(error));                        //Handling the error arise from rejection
 
     f2();
 }
