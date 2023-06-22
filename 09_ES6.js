@@ -50,6 +50,7 @@ console.log("Values of the object myVehicle : ", Object.values(myVehicle))
 
 const [Best1, Best2, , , Best_Friend] = myfriends;      //Omiting some values
 
+//Temple literal 
 console.log(`My Best friends : ${Best1}, ${Best2} and she is my BFF "${Best_Friend}".`);
 
 
@@ -63,3 +64,14 @@ if (arr.includes('Features')) {
 }else{
     console.log("Features not Exits !!");
 }
+
+//Multiple line string 
+
+let learnCoding = `How to start learning web development?
+- Learn HTML
+- Learn CSS
+- Learn JavaScript
+Use freeCodeCamp to learn all the above and much, much more !
+`
+
+console.log(learnCoding);
