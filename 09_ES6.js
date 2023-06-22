@@ -8,10 +8,10 @@ function operation(param1 = 22, params2 = 40) {         //Default values provide
     return result;
 }
 
-console.log(operation());                          //Without passing arguments
+console.log("With default parameters : ", operation());                          //Without passing arguments
 // 880  
 
-console.log(operation(23, 22));                      //Passing arguments
+console.log("While passing the parameters : ", operation(23, 22));                      //Passing arguments
 
 
 //Spread operator
@@ -21,13 +21,12 @@ const myfriends = ['Suraj', 'Swapnil', 'Priya', 'Ashmita', 'Mehwish'];
 
 const myClassmates = ['Sumit', ...myfriends];           //Assing one array to another using spread operator 
 
-console.log(myClassmates);
+console.log("Here combined two arrays using Spread operator : ", myClassmates);
 
 //spread operator in object
 const myVehicle = {
     brand: 'Ford',
     model: 'Mustang',
-
 }
 
 const updateMyVehicle = {
@@ -40,13 +39,18 @@ const myUpdatedVehicle = { ...myVehicle, ...updateMyVehicle }           //Using 
 
 console.log(myUpdatedVehicle)
 
+//key and value methods used to retrive keys and values from the object 
+
+console.log("keyes of the object myVehicle : ", Object.keys(myVehicle))
+
+console.log("Values of the object myVehicle : ", Object.values(myVehicle))
+
 //Destructing 
 //Getting the items which are required
 
 const [Best1, Best2, , , Best_Friend] = myfriends;      //Omiting some values
 
-console.log(`My Best friends : ${Best1}, ${Best2} and she is my BFF "${Best_Friend}"`);
-
+console.log(`My Best friends : ${Best1}, ${Best2} and she is my BFF "${Best_Friend}".`);
 
 
 //includes()
@@ -56,4 +60,6 @@ let arr = ['MyPet', 'MyDevice', 'HeyThere', 'Mobile', 'Features'];
 
 if (arr.includes('Features')) {
     console.log('Features Exits!!');
+}else{
+    console.log("Features not Exits !!");
 }
