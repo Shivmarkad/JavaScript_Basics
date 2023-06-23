@@ -1,2 +1,3 @@
 # JavaScript_Basics
-Here I am noting down my daily learnings !!
+Here I creating my notes for JavaScript !!
+And Practicing problems 
