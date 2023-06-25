@@ -73,13 +73,8 @@ console.log(myDescEv)
 
 let myExDesc = `\nCurrently I am learning the array operations and string operations in the JavaScript.`
 
-
 //Concanating the two string using concat method 
 
 let newDesc = myDesc.concat(myExDesc)
 
 console.log(newDesc)
-
-
-
-

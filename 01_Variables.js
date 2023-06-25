@@ -21,15 +21,15 @@ print() // 2500
 
 //Local scope variable 
 function print() {
-    var num = 50              // As it is declared inside the function so it has local scope 
-    var square = num * num    // It can be accessed inside the local scope only 
-    console.log(square)
-  }
-  
-  print() // 2500
-  
-  console.log(num)            // Out the scope/function will get not defined error
-  // ReferenceError: number is not defined
+  var num = 50              // As it is declared inside the function so it has local scope 
+  var square = num * num    // It can be accessed inside the local scope only 
+  console.log(square)
+}
+
+print() // 2500
+
+console.log(num)            // Out the scope/function will get not defined error
+// ReferenceError: number is not defined
 
 // var keyword allows redeclaration
 var num1 = 50
@@ -47,7 +47,7 @@ console.log(num1) // 20
 // Using let
 
 let c = 5;
-let d = 6;   
+let d = 6;
 let sum2 = d + c;
 console.log(sum2)
 
@@ -77,7 +77,7 @@ print()
 let number = 50
 console.log(number) // 50
 
-number = 100                  //Can ve reassigned
+number = 100                  //Can be reassigned
 console.log(number) // 100
 
 

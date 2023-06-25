@@ -55,7 +55,7 @@ console.log(`My Best friends : ${Best1}, ${Best2} and she is my BFF "${Best_Frie
 
 
 //includes()
-//The includes() function is used to determine whether an array contains a specified value. If it does, it returns true. Otherwise, it returns false.
+//The includes() function is used to determine whether an array contains a speci fied value. If it does, it returns true. Otherwise, it returns false.
 
 let arr = ['MyPet', 'MyDevice', 'HeyThere', 'Mobile', 'Features'];
 

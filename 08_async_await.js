@@ -30,7 +30,7 @@ async function dish() {
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log("This is massage form dish async function timeout.")
+            resolve("This is massage form dish async function timeout.")
         }, 2000);
     })
 }
@@ -41,17 +41,19 @@ async function hello() {
     let data = await myPromise()
     console.log(data)
 
-    await dish()
+    let data1 = await dish()
+    console.log(data1)
 }
 
 hello()
 
 let num_set = [1, 2, 3, 4, 5];
 
-export default function hello1() {
-	console.log("Hello World!");
-}
+
+// export default function hello1() {
+// 	console.log("Hello World!");
+// }
 
 
-export { hello};
+// export { hello};
 
