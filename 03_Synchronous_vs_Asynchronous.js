@@ -73,3 +73,4 @@ function test() {
 
 setTimeout(printMe, 2000);     //here the printMe function will execute after 2 seconds 
 test();                        //This will execute before the printme function
+

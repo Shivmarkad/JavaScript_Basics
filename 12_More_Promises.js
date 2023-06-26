@@ -2,60 +2,61 @@
 
 let prom1 = new Promise(function (myResolve, myReject) {
     setTimeout(() => {
-        return myReject("This is prom1");
+        return myResolve("This is prom1");
 
-    }, 500);
+    }, 200);
 
 });
 
 let prom2 = new Promise(function (myResolve, myReject) {
     setTimeout(() => {
-        return myReject("This is prom2");
-
-    }, 200);
-
-
-});
-let prom3 = new Promise(function (myResolve, myReject) {
-    setTimeout(() => {
-        return myReject("This is prom3");
-
-    }, 300);
-
-});
-let prom4 = new Promise(function (myResolve, myReject) {
-    setTimeout(() => {
-        return myResolve("This is prom4");
-
-    }, 400);
-
-});
-
-let prom5 = new Promise(function (myResolve, myReject) {
-    setTimeout(() => {
-        return myResolve("This is prom5 rejected");              //here it return myReject error
+        return myResolve("This is prom2");
 
     }, 100);
 
 });
+// let prom3 = new Promise(function (myResolve, myReject) {
+//     setTimeout(() => {
+//         return myReject("This is prom3");
+
+//     }, 300);
+
+// });
+// let prom4 = new Promise(function (myResolve, myReject) {
+//     setTimeout(() => {
+//         return myResolve("This is prom4");
+
+//     }, 400);
+
+// });
+
+// let prom5 = new Promise(function (myResolve, myReject) {
+//     setTimeout(() => {
+//         return myResolve("This is prom5");              //here it return myReject error
+
+//     }, 100);
+
+// });
 
 
-// all medthod
-//will return the rejected promise which settles first
+// all method
+//will return the rejected promise which settles first 
+//if all the promises are resolved then return all the promises
 
-Promise.all([prom1, prom2, prom3, prom4, prom5])
-    .then((values) => {
-        console.log(values)
-    }
-    )
-    .catch((err) => {
-        console.log(err)
-    })
+// Promise.all([])
+//     .then((values) => {
+//         console.log(values)
+//     }
+//     )
+//     .catch((err) => {
+//         console.log(err)
+//     });    
 
-//any
-// any method it return which settle first
+
+//any method
+// any method will return which settle first
 // This method returns a promise that fulfills or rejects as soon as any of the promises,
-//It checks for resolved promise if there is rejected promise
+// It checks for resolved promise if there is rejected promise
 
 // Promise.any([prom1, prom2, prom3, prom4, prom5])
 // .then((values)=>{
@@ -64,18 +65,19 @@ Promise.all([prom1, prom2, prom3, prom4, prom5])
 // )
 // .catch((err)=>{
 //     console.log(err)
-// })
+// })                                          
 
-//race method => in this first promise which settles will get returned
+// race method
+// race method => in this first promise which settles will get returned rejected or resolved 
 
-// Promise.race([prom1, prom2, prom3, prom4, prom5])
-//     .then((values) => {
-//         console.log(values)
-//     }
-//     )
-//     .catch((err) => {
-//         console.log(err)
-//     })
-//     .finally(() => {
-//         console.log("This is the final statement")
-//     })
+Promise.race([prom1, prom2])
+    .then((values) => {
+        console.log(values)
+    }
+    )
+    .catch((err) => {
+        console.log(err)
+    })
+    .finally(() => {
+        console.log("This is the final statement")
+    })
