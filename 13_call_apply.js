@@ -36,8 +36,6 @@ const propr2 = {
 // This will return "Mary Doe":
 console.log(propr1.myc.apply(propr2));
 
-
-
 // bind method
 
 const person4 = {
@@ -57,3 +55,7 @@ const member = {
 let fullName2 = person4.fullName2.bind(member);
 
 console.log(fullName2())
+
+/*call : binds the this value, invokes the function, and allows you to pass a list of arguments. 
+apply : binds the this value, invokes the function, and allows you to pass arguments as an array. 
+bind : binds the this value, returns a new function, and allows you to pass in a list of arguments.*/
