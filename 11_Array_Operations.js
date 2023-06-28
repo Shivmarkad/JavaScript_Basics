@@ -7,6 +7,8 @@ arr.forEach((data, a) => {
     console.log(data, a);
 })
 
+
+
 //Using push method to add items in the array at the end 
 
 arr.push("When")
@@ -78,3 +80,6 @@ let myExDesc = `\nCurrently I am learning the array operations and string operat
 let newDesc = myDesc.concat(myExDesc)
 
 console.log(newDesc)
+
+
+//find index and find 

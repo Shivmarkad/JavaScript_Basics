@@ -135,3 +135,8 @@ const number5 = 50         // const variable is hoisted as uninitialized
 
 // If you never want a variable to change, const is the keyword to use.
 
+for(let i = 1; i<10; i++){
+  setTimeout(() => {
+    console.log(i)
+  }, 1000);
+}
