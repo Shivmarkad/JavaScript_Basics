@@ -41,7 +41,7 @@ let prom2 = new Promise(function (myResolve, myReject) {
 
 // all method
 //will return the rejected promise which settles first 
-//if all the promises are resolved then return all the promises
+//if all the promises are resolved then return all the promises are resolved 
 
 // Promise.all([])
 //     .then((values) => {
@@ -54,7 +54,7 @@ let prom2 = new Promise(function (myResolve, myReject) {
 
 
 //any method
-// any method will return which settle first
+// any method will return the promise which settle first
 // This method returns a promise that fulfills or rejects as soon as any of the promises,
 // It checks for resolved promise if there is rejected promise
 
