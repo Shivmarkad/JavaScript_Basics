@@ -1,9 +1,9 @@
 const fs = require('fs');
 const prompt = require("prompt-sync")();
-const myToDoList = require("./myToDoList.json")
+const myToDoList = require("./myToDoList.json");
 const fileName = "myToDoList.json"
 
-
+//To Read the file
 function toReadJson(fileName) {
 
     fs.readFile(fileName, 'utf8', (err, data) => {
@@ -18,8 +18,9 @@ function toReadJson(fileName) {
             console.log('Error parsing JSON data:', error);
         }
     });
+    return;
 }
-
+//To write data into the file
 function toWriteData(fileName, data) {
 
     const jsonData1 = JSON.stringify(data, null, 2);
@@ -28,30 +29,32 @@ function toWriteData(fileName, data) {
         if (err) {
             console.log('Unable to update JSON file:', err);
         } else {
-            console.log('Task has been saved.');
+            console.log('To_Do_List has been saved.');
         }
     });
 
 }
-
-function toAddTask(data, newTaskObj) {
-    
+//To Add new task
+function toAddTask(data) {
+    let newTask = prompt("What is you task : ");
+    let desc = prompt("What is the description of the task : ");
+    let newTaskObj = {
+        Task: newTask,
+        Desc: desc
+    }
     let newId = toGenrateNewId(data)
-
     data[newId] = newTaskObj;
-    // data.push(item);
-    console.log(`Task added succesfully and corresponding task Id ${newId}`);
 
+    console.log(`Task added succesfully and corresponding task Id is ${newId}`);
+    return;
 };
 
+//To Generate new id
 function toGenrateNewId(data) {
 
     let keyOfObj = Object.keys(data);
-
     let lenOfObj = keyOfObj.length;
-
     let arrint = keyOfObj.map(rh => parseInt(rh))
-
     let maxId = Math.max(...arrint)
 
     if (lenOfObj == 0) {
@@ -60,75 +63,67 @@ function toGenrateNewId(data) {
         return maxId + 1;
     }
 }
-
-function toDisplayTaskById(data, id) {
-
+//To display the task by id
+function toDisplayTaskById(data) {
+    let id = prompt("What is the Id to get the Task :")
     console.log(data[id]);
-
 }
 //to delete existing task
-//to update existing details 
+function toDeleteTaskById(data) {
 
+    let id = prompt("What is the Id to delete the Task :")
+    delete data[id];
+    console.log(`Task with Id : ${id} has been deleted succesfully`)
+    return;
+}
 
-var userInput = "yes";
+//to update existing details
+function toUpdateData(data) {
 
-while (userInput == "yes") {
-
-    // let validEntries = ["1","2","3","4","5"];
-
-    // let userInput = prompt(`Enter the corresponding number to perform action:
-    // 1 : To Display all the task
-    // 2 : To Add new task
-    // 3 : To display the task with ID
-    // 4 : To update the existing task with Id
-    // 5 : To delete the existing task with Id
-    // `)
-
-    var userInput = prompt("Do you want to create task ? : ").toLowerCase()
-
-    if (userInput == "yes") {
-        var task = prompt("What is your task? -").toLowerCase();
-        var desc = prompt("What is the description of the task.? -");
-
-        let taskObj = {
-            Task : task,
-            Desc : desc
-        }
-        toAddTask(myToDoList, taskObj);
+    let id = prompt("Enter the task Id which has to be updated : ");
+    let task = prompt("What is you task ? ");
+    let desc = prompt("What is the description of the task ? ");
+    let newTaskObj = {
+        Task: task,
+        Desc: desc
     }
-
-    if (userInput == "no") {
-        var listTask = prompt("Do you want to list the task ? ").toLowerCase()
-
-        if (listTask == "yes") {
-            console.log(myToDoList)
-        }
-    }
-    let getTask = prompt("You want to display task by Id ?").toLowerCase()
-    let givenId = prompt("What is the Id")
-
-    if (getTask == "yes"){
-        toDisplayTaskById(myToDoList,givenId)
-    }
+    data[id] = newTaskObj;
+    console.log("Task updated succesfully");
 
 }
+
+var userInput1 = prompt(`Enter the corresponding number to perform action:
+    1 : To Display all the task
+    2 : To Add new task
+    3 : To display the task with ID
+    4 : To update the existing task with Id
+    5 : To delete the existing task with Id
+    `)
+var userInput = parseInt(userInput1)
+
+switch (userInput) {
+    case 1:
+        console.log("This is the case 1")
+        toReadJson(fileName)
+        break;
+    case 2:
+        console.log("This is the case 2")
+        toAddTask(myToDoList)
+
+        break;
+    case 3:
+        console.log("This is the case 3")
+        toDisplayTaskById(myToDoList)
+        break;
+    case 4:
+        console.log("This is the case 4")
+        toUpdateData(myToDoList)
+        break;
+    case 5:
+        console.log("This is the case 5")
+        toDeleteTaskById(myToDoList)
+        break;
+    default:
+        console.log('Invalid Entry');
+}
 toWriteData(fileName, myToDoList);
-
-// console.log(toDisplayTaskById(myToDoList,2));
-
-
-// toReadJson(fileName)
-
-// myToDoList.push(myPro)
-
-// console.log(myToDoList)
-
-// toWriteData(fileName, jsonData)
-// console.log(jsonData)
-// toCheckId(myPro)
-// toDisplayTaskById(jsonData,1)
-// let i = 1;
-
-// console.log(Object.keys(myToDoList[0])==1); //return true
-
-// console.log(toDisplayTaskById(myToDoList,1));
