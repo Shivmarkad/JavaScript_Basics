@@ -5,7 +5,6 @@
 //         resolve("this is resolve")
 // })
 
-const { count } = require("console")
 
 // console.log(myPromise)
 

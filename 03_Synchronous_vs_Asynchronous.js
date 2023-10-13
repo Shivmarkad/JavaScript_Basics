@@ -53,9 +53,9 @@ function func1(){
 
 function func2(){
   console.log("it is my 2nd function)");
-  func1();                                //here we called the function inside of an another function
+  func1();           //here we called the function inside of an another function
 }
-func2();                                  //Here the function invoked func2 will also invoke func 1
+func2();             //Here the function invoked func2 will also invoke func 1
 
 //88888888888888888888888888888888888888888888888888888888888888888888888888888888
 

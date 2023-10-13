@@ -32,7 +32,6 @@ function toWriteData(fileName, data) {
             console.log('To_Do_List has been saved.');
         }
     });
-
 }
 //To Add new task
 function toAddTask(data) {
@@ -109,7 +108,6 @@ switch (userInput) {
     case 2:
         console.log("This is the case 2")
         toAddTask(myToDoList)
-
         break;
     case 3:
         console.log("This is the case 3")

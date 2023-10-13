@@ -33,7 +33,7 @@ arr.unshift("What")
 
 console.log(arr)
 
-//Using the indexOf method to get the index of perticular item in the array  
+//Using the indexOf method to get the index of particular item in the array  
 
 console.log(arr.indexOf("What"))
 
@@ -47,7 +47,6 @@ console.log(arr)
 //Using length method to get the number of elements in the array or the length of the array
 
 console.log("The length of the array : ", arr.length)
-
 
 // String operations
 
@@ -75,11 +74,14 @@ console.log(myDescEv)
 
 let myExDesc = `\nCurrently I am learning the array operations and string operations in the JavaScript.`
 
-//Concanating the two string using concat method 
+//Concatinating the two string using concat method 
 
 let newDesc = myDesc.concat(myExDesc)
 
 console.log(newDesc)
 
-
 //find index and find 
+
+const fruits = ['apple', 'banana', 'orange', 'grape', 'banana'];
+
+console.log(fruits.indexOf('orange'));

@@ -6,7 +6,7 @@ applying a function to each one of the elements of the first array.*/
 
 const numbers = [1, 2, 3, 4];
 
-const squaredn = numbers.map(item => item % 2 === 0);
+const squaredn = numbers.map(item => item *2);
 
 console.log("this is the result for map ",squaredn); 
 
@@ -22,8 +22,8 @@ console.log("this is the result from the filter",evens);
 // The reduce() method reduces an array of values down to just one value.
 
 const sum = numbers.reduce(function (result, item) {
-  return result + item;
-}, 0);
+  return result * item;
+}, 3);
 
 console.log(sum); 
 
@@ -31,13 +31,13 @@ console.log(sum);
 //
 var pets = ['dog', 'chicken', 'cat', 'dog', 'chicken'];
 
-var petCounts = pets.reduce(function(obj, pet){
-    if (!obj[pet]) {
-        obj[pet] = 1;
-    } else {
-        obj[pet]++;
-    }
-    return obj;
-}, {});
+// var petCounts = pets.reduce(function(obj, pet){
+//     if (!obj[pet]) {
+//         obj[pet] = 1;
+//     } else {
+//         obj[pet]++;
+//     }
+//     return obj;
+// }, {});
 
-console.log(petCounts); 
+// console.log(petCounts); 

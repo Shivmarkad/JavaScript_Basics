@@ -18,11 +18,9 @@
 
 //   kitchen();
 
-
-
 async function myPromise() {
     return new Promise((resolve, reject) => {
-        resolve("This is the resolve from myPromise async funciotn")
+        resolve("This is the resolve from myPromise async function")
     })
 }
 

@@ -15,9 +15,9 @@ console.log(myFunction(2,4))
 // Without assigning to the variable called as function expression
 // A function expression can be used as an IIFE (Immediately Invoked Function Expression)which runs as soon as it is defined.
 
-myfunc = () => "Hello there !!" 
+myfunc = (() => "Hello there !!")()
 
-console.log(myfunc())
+console.log(myfunc)
 
 
 //Code for function declaration

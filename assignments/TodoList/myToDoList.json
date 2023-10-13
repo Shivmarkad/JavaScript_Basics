@@ -18,5 +18,21 @@
   "6": {
     "Task": "to update function",
     "Desc": "function should be able to update the task with given id"
+  },
+  "7": {
+    "Task": "to create new program",
+    "Desc": "the program should be able to generate tsk"
+  },
+  "8": {
+    "Task": "go to home on 21-09-23",
+    "Desc": "I'm leaving for home"
+  },
+  "9": {
+    "Task": "to create task",
+    "Desc": "to create todolist"
+  },
+  "10": {
+    "Task": "to is 25 -9- 2023",
+    "Desc": "its monday today"
   }
 }

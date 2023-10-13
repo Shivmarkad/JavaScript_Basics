@@ -33,7 +33,7 @@ const propr2 = {
   colour: "Red"
 }
 
-// This will return "Mary Doe":
+// This will return "Maruti Red":
 console.log(propr1.myc.apply(propr2));
 
 // bind method
