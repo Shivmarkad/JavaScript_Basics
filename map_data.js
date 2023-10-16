@@ -15,3 +15,19 @@ console.log(map1)
 for(const [key,val] of map1){
     console.log(`key ${key} and the value is ${val}`)
 }
+
+//get method to get the value with key
+console.log(map1.get('a'));
+
+//set method to set the value with key
+map1.set('a', 97);
+
+console.log(map1.get('a'));
+
+//size to get the size of map data structure
+console.log(map1.size);
+
+//delete method to delete the value with key 
+map1.delete('b');
+
+console.log(map1.size);
