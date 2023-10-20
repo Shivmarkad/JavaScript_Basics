@@ -34,9 +34,26 @@ class MyDetails{
     constructor(){}
     getDetails(){console.log("hey there")}
 }
-//preventing class methods being added
 let newDetails = new MyDetails()
 
+//preventing class methods being added
 Object.freeze(newDetails)
 
+```
+
+## Factory Method Pattern
+
+The Factory method pattern provides an interface for creating objects that can be modified after creation. 
+
+```javascript
+class Person {
+    constructor (name, age) {
+        this.name = name
+        this.age = age
+    }
+    sayPhrase = () => console.log(this.phrase)
+}
+
+const person1 = new Person('Shiv',24)
+console.log(person1.name) // output: "Shiv"
 ```
