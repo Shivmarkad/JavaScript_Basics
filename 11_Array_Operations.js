@@ -1,6 +1,6 @@
 // The Array object is used to store multiple values in a single variable.
 
-let arr = ["Hi", "This", "That", "How", "Where"]
+// let arr = ["Hi", "This", "That", "How", "Where"]
 
 //Using forEach loop to iterate eitems from array arr
 arr.forEach((data, a) => {
