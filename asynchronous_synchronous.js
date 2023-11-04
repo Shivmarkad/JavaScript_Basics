@@ -45,3 +45,10 @@ function main(name, lastName){
 }
 
 main('shiv', 'Markad')
+
+// Result will be :
+
+// hello there from main
+// Your name is shiv
+// Hey I'm from promise
+// Your lastname is Markad
