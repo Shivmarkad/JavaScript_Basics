@@ -51,3 +51,22 @@ let calDiv = (x, y) => {
 }
 
 console.log("Division : " + calDiv(24, 4));
+
+// to check prime number
+
+function isPrime(ele){
+    let prime = true;
+    if(ele == 1 | ele == 2){
+        return false
+    }
+    for(let i = 2; i< ele/2; i++){
+        if(ele%i == 0){
+            prime = false
+        }
+    }
+    return prime
+}
+
+let numb = 45
+
+console.log(isPrime(numb)) // false
