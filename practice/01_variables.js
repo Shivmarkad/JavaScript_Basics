@@ -46,3 +46,13 @@ const myRole = "Dev";
 
 // const myRole = 23;   // SyntaxError: Identifier 'myRole' has already been declared
 console.log(myRole)
+
+function getRole(){
+    const role = "Carpenter"
+    console.log(role)
+}
+getRole()
+
+// console.log(role)       // ReferenceError: role is not defined
+
+
